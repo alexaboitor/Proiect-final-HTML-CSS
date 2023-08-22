@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagecontacts</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/stylecontacts.css" />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      * {
+        background-color: #eccf7e;
+      }
+      ul {
+        list-style: none;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      /*Navigation bar*/
+      .navigation {
+        display: contents;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #eccf7e;
+      }
+      /* The navbar container */
+      .navigation {
+        background-color: #eccf7e;
+      }
+
+      /* Navbar links */
+      .navigation a {
+        float: left;
+        color: #1f1919;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        background-color: #eccf7e;
+      }
+
+      /* Links - change color on hover */
+      .navigation a:hover {
+        background-color: rgb(224, 188, 154);
+        color: black;
+      }
+
+      /* Style inputs */
+      input[type="text"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }
+
+      input[type="submit"] {
+        background-color: #f19114;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #f11010;
+      }
+
+      /* Style the container/contact section */
+      .container h2,
+      p {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color: #d37203;
+        left: 100px;
+      }
+
+      /* Create two columns that float next to eachother */
+      .column {
+        float: left;
+        width: 50%;
+        margin-top: 6px;
+        padding: 20px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column,
+        input[type="submit"] {
+          width: 100%;
+          margin-top: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!---Header ce o sa contina navigatia si logo--->
+      <nav class="navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="pageshop.html"> Shop</a></li>
+          <li><a href="pageproducts.html"> Products</a></li>
+          <li><a href="pagecontacts.html"> Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div style="text-align: center"></div>
+      <div class="row">
+        <div class="column"></div>
+        <div class="column">
+          <form action="#">
+            <label for="fname">First Name</label>
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Your name.."
+            />
+            <label for="lname">Last Name</label>
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Your last name.."
+            />
+            <label for="country">Country</label>
+            <select id="country" name="country">
+              <option value="Hungary">Hungary</option>
+              <option value="Germany">Germany</option>
+              <option value="France">France</option>
+              <option value="Romania">Romania</option>
+              <option value="italy">Italy</option>
+              <option value="Spain">Spain</option>
+              <option value="Turkey">Turkey</option>
+              <option value="France">France</option>
+            </select>
+            <label for="subject">Subject</label>
+            <textarea
+              id="subject"
+              name="subject"
+              placeholder="Write something.."
+              style="height: 170px"
+            ></textarea>
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
